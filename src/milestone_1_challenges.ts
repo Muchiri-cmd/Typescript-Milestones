@@ -99,6 +99,19 @@ function powerUp(num: number, times: number = 0): number {
   return result;
 }
 
+//Challenge 13: Factorial Calulator
+function factorial(n: number) {
+  if (n < 0) {
+    return;
+  } else if (n == 1) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -155,3 +168,8 @@ console.log(powerUp(2, 3)); //8 (2 * 2 * 2)
 console.log(powerUp(5, 0)); // 1  (anything to the zero power is 1)
 console.log(powerUp(3, 4)); // 81 (3 * 3 * 3 * 3)
 console.log(powerUp(0)); // 1)
+
+console.log("Factorial Calculator");
+console.log(factorial(0)); // 1
+console.log(factorial(4)); // 24  (1 * 2 * 3 * 4))
+console.log(factorial(6)); // 720 (1 * 2 * 3 * 4 * 5 * 6))
