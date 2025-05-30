@@ -79,6 +79,17 @@ function perimeter(letter: string, num: number): number {
   return letter === "s" ? 4 * num : letter === "c" ? 6.28 * num : 0;
 }
 
+//Challenge 11: Sum of Evven Numbers
+function sumEvenNumbers(n: number): number {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -124,3 +135,8 @@ console.log(fizzBuzzCheck(7)); // "7")
 console.log("Perimeter 2");
 console.log(perimeter("s", 7)); //28)
 console.log(perimeter("c", 4)); //25.12)
+
+console.log("Sum of Even Numbers");
+console.log(sumEvenNumbers(6)); // 12  (2 + 4 + 6))
+console.log(sumEvenNumbers(10)); // 30  (2 + 4 + 6 + 8 + 10))
+console.log(sumEvenNumbers(5)); // 6   (2 + 4))
