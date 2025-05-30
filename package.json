@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "code": "tsc src/milestone_1_challenges.ts && node src/milestone_1_challenges.js",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "fr": "npm run format && npm run code"
   },
   "keywords": [],
   "author": "",

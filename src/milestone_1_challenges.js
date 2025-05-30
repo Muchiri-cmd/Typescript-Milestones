@@ -17,6 +17,24 @@ function isNegative(num) {
     }
     return false;
 }
+//Challenge5: Can i Drive
+function canDrive(name, age) {
+    if (age >= 18) {
+        return "".concat(name, " is old enough to drive");
+    }
+    else {
+        return "".concat(name, " is not old enough to drive");
+    }
+}
+//Challenge 6: Largest Number
+function findLargest(a, b, c) {
+    if (a >= b && a >= c)
+        return a;
+    else if (b >= a && b >= c)
+        return b;
+    else
+        return c;
+}
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -30,3 +48,10 @@ console.log(perimeter(20, 10)); //20
 console.log("Check Negative");
 console.log(isNegative(-23)); //true
 console.log(isNegative(55)); //false
+console.log("Can I Drive");
+console.log(canDrive("Jane", 22)); // Jane is old enough to drive)
+console.log(canDrive("June", 12)); // June is not old enough to drive yet)
+console.log("Largest Number");
+console.log(findLargest(5, 9, 3)); //9
+console.log(findLargest(10, 10, 10)); // 10)
+console.log(findLargest(-1, -5, -3)); // -1)
