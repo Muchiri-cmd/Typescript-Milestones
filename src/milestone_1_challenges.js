@@ -10,6 +10,13 @@ function convert(int) {
 function perimeter(length, width) {
     return 2 * (length + width);
 }
+//Challenge4:Check Negative
+function isNegative(num) {
+    if (num < 0) {
+        return true;
+    }
+    return false;
+}
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -20,3 +27,6 @@ console.log(convert(2)); //120
 console.log("Perimeter of a Rectangle");
 console.log(perimeter(6, 7)); //30
 console.log(perimeter(20, 10)); //20
+console.log("Check Negative");
+console.log(isNegative(-23)); //true
+console.log(isNegative(55)); //false
