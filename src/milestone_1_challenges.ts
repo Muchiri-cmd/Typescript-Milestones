@@ -90,6 +90,15 @@ function sumEvenNumbers(n: number): number {
   return sum;
 }
 
+//Challenge 12: Multiply By itself
+function powerUp(num: number, times: number = 0): number {
+  let result = 1;
+  for (let i = 0; i < times; i++) {
+    result *= num;
+  }
+  return result;
+}
+
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -140,3 +149,9 @@ console.log("Sum of Even Numbers");
 console.log(sumEvenNumbers(6)); // 12  (2 + 4 + 6))
 console.log(sumEvenNumbers(10)); // 30  (2 + 4 + 6 + 8 + 10))
 console.log(sumEvenNumbers(5)); // 6   (2 + 4))
+
+console.log("Multiply By Itself");
+console.log(powerUp(2, 3)); //8 (2 * 2 * 2)
+console.log(powerUp(5, 0)); // 1  (anything to the zero power is 1)
+console.log(powerUp(3, 4)); // 81 (3 * 3 * 3 * 3)
+console.log(powerUp(0)); // 1)
