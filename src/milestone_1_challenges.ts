@@ -124,6 +124,16 @@ function sumMultiples(n:number,divisor:number):number{
   return sum;
 }
 
+function sumDigits(num:number):number{
+  let sum = 0;
+  while (num > 0) {
+    let lastDigit = num % 10;
+    sum += lastDigit // Add the last digit to sum
+    num = Math.floor(num / 10); // Remove the last digit
+  }
+  return sum;
+}
+
 
 //Test cases
 console.log("Sum of 2 Numbers");
@@ -191,3 +201,8 @@ console.log("Multiple Sum");
 console.log(sumMultiples(10, 2)); // 30  (2 + 4 + 6 + 8 + 10)
 console.log(sumMultiples(15, 3)); // 45  (3 + 6 + 9 + 12 + 15)
 console.log(sumMultiples(7, 5)); // 5
+
+console.log("Sum of Digits");
+console.log(sumDigits(123));   // 6   (1 + 2 + 3)
+console.log(sumDigits(4567));  // 22  (4 + 5 + 6 + 7)
+console.log(sumDigits(0));     // 0)
