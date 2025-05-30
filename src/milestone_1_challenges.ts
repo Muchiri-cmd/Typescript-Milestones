@@ -36,6 +36,20 @@ function findLargest(a: number, b: number, c: number): number {
   else return c;
 }
 
+//Challenge7: BMI Calculator
+function calculateBMI(weight: number, height: number): string {
+  let BMI = weight / (height * height);
+  if (BMI < 18.5) {
+    return `Your BMI is ${BMI.toFixed(1)} - Underweight`;
+  } else if (BMI >= 18.5 && BMI < 24.9) {
+    return `Your BMI is ${BMI.toFixed(1)} - Normal weight`;
+  } else if (BMI >= 25 && BMI < 29.9) {
+    return `Your BMI is ${BMI.toFixed(1)} - Overweight`;
+  } else {
+    return `Your BMI is ${BMI.toFixed(1)} - Obesity`;
+  }
+}
+
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -54,10 +68,14 @@ console.log(isNegative(-23)); //true
 console.log(isNegative(55)); //false
 
 console.log("Can I Drive");
-console.log(canDrive("Jane", 22)); // Jane is old enough to drive)
-console.log(canDrive("June", 12)); // June is not old enough to drive yet)
+console.log(canDrive("Jane", 22)); // Jane is old enough to drive
+console.log(canDrive("June", 12)); // June is not old enough to drive yet
 
 console.log("Largest Number");
 console.log(findLargest(5, 9, 3)); //9
-console.log(findLargest(10, 10, 10)); // 10)
-console.log(findLargest(-1, -5, -3)); // -1)
+console.log(findLargest(10, 10, 10)); // 10
+console.log(findLargest(-1, -5, -3)); // -1
+
+console.log("BMI Calculator");
+console.log(calculateBMI(68, 1.75)); //Your BMI is 22.2 - Normal weight
+console.log(calculateBMI(85, 1.8)); // Your BMI is 26.2 - Overweight
