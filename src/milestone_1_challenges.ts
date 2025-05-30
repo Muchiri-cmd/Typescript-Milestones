@@ -9,7 +9,7 @@ function convert(int: number): number {
 }
 
 //Challenge 3: Perimeter of a Rectangle
-function perimeter(length: number, width: number): number {
+function findPerimeter(length: number, width: number): number {
   return 2 * (length + width);
 }
 //Challenge4:Check Negative
@@ -50,6 +50,35 @@ function calculateBMI(weight: number, height: number): string {
   }
 }
 
+//Challenge 8: Greeting Based on Time
+function greetUser(name: string, hour: number): string {
+  if (hour >= 5 && hour <= 12) {
+    return `Good Morning, ${name}!`;
+  } else if (hour > 12 && hour <= 17) {
+    return `Good Afternoon, ${name}!`;
+  } else if (hour > 17 && hour <= 21) {
+    return `Good Evening, ${name}!`;
+  }
+  return `Good Night, ${name}!`;
+}
+
+//Challenge 9: FizzBuzz
+function fizzBuzzCheck(num: number): string {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "FizzBuzz";
+  } else if (num % 3 === 0) {
+    return "Fizz";
+  } else if (num % 5 === 0) {
+    return "Buzz";
+  }
+  return num.toString();
+}
+
+//Challenge 10: Perimeter 2
+function perimeter(letter: string, num: number): number {
+  return letter === "s" ? 4 * num : letter === "c" ? 6.28 * num : 0;
+}
+
 //Test cases
 console.log("Sum of 2 Numbers");
 console.log(addition(3, 5)); //8
@@ -60,8 +89,8 @@ console.log(convert(5)); //300
 console.log(convert(2)); //120
 
 console.log("Perimeter of a Rectangle");
-console.log(perimeter(6, 7)); //30
-console.log(perimeter(20, 10)); //20
+console.log(findPerimeter(6, 7)); //30
+console.log(findPerimeter(20, 10)); //20
 
 console.log("Check Negative");
 console.log(isNegative(-23)); //true
@@ -79,3 +108,19 @@ console.log(findLargest(-1, -5, -3)); // -1
 console.log("BMI Calculator");
 console.log(calculateBMI(68, 1.75)); //Your BMI is 22.2 - Normal weight
 console.log(calculateBMI(85, 1.8)); // Your BMI is 26.2 - Overweight
+
+console.log("Greeting Based on Time");
+console.log(greetUser("Alice", 10)); // Good Morning, Alice!
+console.log(greetUser("Bob", 15)); // Good Afternoon, Bob!
+console.log(greetUser("Charlie", 19)); // Good Evening, Charlie!
+console.log(greetUser("Dave", 23)); // Good Night, Dave!
+
+console.log("FizzBuzz Challenge");
+console.log(fizzBuzzCheck(3)); // "Fizz"
+console.log(fizzBuzzCheck(10)); // "Buzz"
+console.log(fizzBuzzCheck(15)); // "FizzBuzz"
+console.log(fizzBuzzCheck(7)); // "7")
+
+console.log("Perimeter 2");
+console.log(perimeter("s", 7)); //28)
+console.log(perimeter("c", 4)); //25.12)
