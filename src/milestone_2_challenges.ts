@@ -1,6 +1,6 @@
 //Challenege  1:Sum of Positives
 function sumOfPositives(array: number[]): number {
-  let sum = 0;
+  let sum: number = 0;
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 0) {
       sum += array[i];
@@ -20,9 +20,37 @@ function findMax(array: number[]): number {
   return maxNumber;
 }
 
+//Challenge3 : Election Winner
+interface Candidate {
+  name: string;
+  votes: number;
+}
+
+function findWinner(array: Candidate[]): Candidate {
+  let highestNumberofVotes = 0;
+  let winner: Candidate = array[0];
+
+  for (let candidate of array) {
+    if (candidate.votes > highestNumberofVotes) {
+      highestNumberofVotes = candidate.votes;
+      winner = candidate;
+    }
+  }
+  return winner;
+}
+
 //Test cases
 console.log("Sum of Positives");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
 
 console.log("Find Maximum Value");
 console.log(findMax([3, 7, 2, 9, 5])); // returns: 9
+
+console.log("Election Winner");
+const candidates = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 },
+];
+
+console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
