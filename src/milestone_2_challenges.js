@@ -94,6 +94,18 @@ function countTruthy(obj) {
     }
     return count;
 }
+//Challenge10:Average of Numbers
+function average(array) {
+    var sum = 0;
+    for (var _i = 0, array_5 = array; _i < array_5.length; _i++) {
+        var num = array_5[_i];
+        sum += num;
+    }
+    var average = sum / array.length;
+    if (average)
+        return average;
+    return 0;
+}
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -118,3 +130,6 @@ console.log("=======Difference Between Sum of Even and Odd Numbers==========");
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // returns: 3  // (2 + 4 + 6) - (1 + 3 + 5) = 12 - 9 = 3
 console.log("=======================Count Truthy ============================");
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // returns: 2  // "hello" and 42 are truthy
+console.log("========================Average of Numbers ======================");
+console.log(average([2, 4, 6, 8])); // returns: 5
+console.log(average([])); // returns: 0

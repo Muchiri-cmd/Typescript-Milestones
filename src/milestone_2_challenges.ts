@@ -113,6 +113,16 @@ function countTruthy(obj: Record<string, any>): number {
   return count;
 }
 
+//Challenge10:Average of Numbers
+function average(array: number[]): number | void {
+  let sum = 0;
+  for (let num of array) {
+    sum += num;
+  }
+  let average = sum / array.length;
+  if (average) return average;
+  return 0;
+}
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -145,3 +155,9 @@ console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // returns: 3  // (2 + 4 + 6
 
 console.log("=======================Count Truthy ============================");
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // returns: 2  // "hello" and 42 are truthy
+
+console.log(
+  "========================Average of Numbers ======================",
+);
+console.log(average([2, 4, 6, 8])); // returns: 5
+console.log(average([])); // returns: 0
