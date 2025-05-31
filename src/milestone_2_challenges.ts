@@ -66,6 +66,19 @@ function countProperties(object: UserInfo): number {
   return numberofProperties;
 }
 
+//Challenge6: Filter By Length
+function filterByLength(array: string[], minLength: number): string[] {
+  let newArray: string[] = [];
+
+  for (let item of array) {
+    console.log(item);
+    if (item.length >= minLength) {
+      newArray.push(item);
+    }
+  }
+  return newArray;
+}
+
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -86,3 +99,6 @@ console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // retu
 
 console.log("===================Count Properties========================");
 console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // returns: 3
+
+console.log("=======================Filter by Length=====================");
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // returns: ["giraffe", "hippo", "elephant"]

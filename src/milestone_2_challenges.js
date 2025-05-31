@@ -43,7 +43,24 @@ function findLongestWord(array) {
     return longestWord;
 }
 function countProperties(object) {
-    return Object.keys(object).length;
+    // return Object.keys(object).length;
+    var numberofProperties = 0;
+    for (var prop in object) {
+        numberofProperties += 1;
+    }
+    return numberofProperties;
+}
+//Challenge6: Filter By Length
+function filterByLength(array, minLength) {
+    var newArray = [];
+    for (var _i = 0, array_2 = array; _i < array_2.length; _i++) {
+        var item = array_2[_i];
+        console.log(item);
+        if (item.length >= minLength) {
+            newArray.push(item);
+        }
+    }
+    return newArray;
 }
 //Test cases
 console.log("==================Sum of Positives=====================");
@@ -61,3 +78,5 @@ console.log("====================Longest word==========================");
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // returns: "grapefruit"
 console.log("===================Count Properties========================");
 console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // returns: 3
+console.log("=======================Filter by Length=====================");
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // returns: ["giraffe", "hippo", "elephant"]
