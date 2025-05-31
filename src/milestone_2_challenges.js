@@ -122,6 +122,16 @@ function reverseLinearSearch(array, value) {
     }
     return -1;
 }
+//Challenge13: Linear Search all Indices
+function linearSearchAll(array, value) {
+    var indices = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            indices.push(i);
+        }
+    }
+    return indices;
+}
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -155,3 +165,6 @@ console.log(linearSearch([5, 3, 7, 1, 4], 10)); // returns: -1
 console.log("=======================Reverse Linear Search====================");
 console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)); // returns: 5
 console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // returns: -1
+console.log("=======================Linear Search All Indices====================");
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7)); // returns: [2, 5]
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10)); // returns: []
