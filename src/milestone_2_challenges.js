@@ -62,6 +62,18 @@ function filterByLength(array, minLength) {
     }
     return newArray;
 }
+//Challenge7: Sum of Even Numbers
+function sumEvenNumbers2(array) {
+    var sum = 0;
+    for (var _i = 0, array_3 = array; _i < array_3.length; _i++) {
+        var number = array_3[_i];
+        if (number % 2 == 0) {
+            //positive
+            sum += number;
+        }
+    }
+    return sum;
+}
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -80,3 +92,5 @@ console.log("===================Count Properties========================");
 console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // returns: 3
 console.log("=======================Filter by Length=====================");
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // returns: ["giraffe", "hippo", "elephant"]
+console.log("==================Sum of Even Numbers========================");
+console.log(sumEvenNumbers2([1, 2, 3, 4, 5, 6])); // returns: 12  // because 2 + 4 + 6 = 12
