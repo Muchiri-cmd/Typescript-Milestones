@@ -90,6 +90,18 @@ function sumEvenNumbers2(array: number[]): number {
   }
   return sum;
 }
+
+//Challenge8:Difference Between Sum of Even and Odd Numbers
+function differenceEvenOdd(array: number[]): number {
+  let sumEvenNumbers = 0;
+  let sumOddNumbers = 0;
+
+  for (let number of array) {
+    number % 2 === 0 ? (sumEvenNumbers += number) : (sumOddNumbers += number);
+  }
+  return sumEvenNumbers - sumOddNumbers;
+}
+
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -116,3 +128,6 @@ console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); 
 
 console.log("==================Sum of Even Numbers========================");
 console.log(sumEvenNumbers2([1, 2, 3, 4, 5, 6])); // returns: 12  // because 2 + 4 + 6 = 12
+
+console.log("=======Difference Between Sum of Even and Odd Numbers==========");
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // returns: 3  // (2 + 4 + 6) - (1 + 3 + 5) = 12 - 9 = 3
