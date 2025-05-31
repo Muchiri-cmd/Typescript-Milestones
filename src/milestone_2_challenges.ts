@@ -25,7 +25,6 @@ interface Candidate {
   name: string;
   votes: number;
 }
-
 function findWinner(array: Candidate[]): Candidate {
   let highestNumberofVotes = 0;
   let winner: Candidate = array[0];
@@ -38,19 +37,34 @@ function findWinner(array: Candidate[]): Candidate {
   }
   return winner;
 }
+// Longest Word
+function findLongestWord(array: string[]): string {
+  let maxLength = array[0].length;
+  let longestWord = "";
+
+  array.forEach((word) => {
+    if (word.length > maxLength) {
+      maxLength = word.length;
+      longestWord = word;
+    }
+  });
+  return longestWord;
+}
 
 //Test cases
-console.log("Sum of Positives");
+console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
 
-console.log("Find Maximum Value");
+console.log("====================Find Maximum Value==================");
 console.log(findMax([3, 7, 2, 9, 5])); // returns: 9
 
-console.log("Election Winner");
+console.log("================Election Winner=========================");
 const candidates = [
   { name: "Alice", votes: 50 },
   { name: "Bob", votes: 75 },
   { name: "Charlie", votes: 65 },
 ];
-
 console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
+
+console.log("====================Longest word==========================");
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // returns: "grapefruit"
