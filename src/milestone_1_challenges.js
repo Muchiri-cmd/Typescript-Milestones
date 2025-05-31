@@ -1,3 +1,4 @@
+"use strict";
 //Challenge 1: Return th sum of Two Numbers
 function addition(num1, num2) {
   return num1 + num2;
@@ -20,9 +21,9 @@ function isNegative(num) {
 //Challenge5: Can i Drive
 function canDrive(name, age) {
   if (age >= 18) {
-    return "".concat(name, " is old enough to drive");
+    return `${name} is old enough to drive`;
   } else {
-    return "".concat(name, " is not old enough to drive");
+    return `${name} is not old enough to drive`;
   }
 }
 //Challenge 6: Largest Number
@@ -33,27 +34,27 @@ function findLargest(a, b, c) {
 }
 //Challenge7: BMI Calculator
 function calculateBMI(weight, height) {
-  var BMI = weight / (height * height);
+  let BMI = weight / (height * height);
   if (BMI < 18.5) {
-    return "Your BMI is ".concat(BMI.toFixed(1), " - Underweight");
+    return `Your BMI is ${BMI.toFixed(1)} - Underweight`;
   } else if (BMI >= 18.5 && BMI < 24.9) {
-    return "Your BMI is ".concat(BMI.toFixed(1), " - Normal weight");
+    return `Your BMI is ${BMI.toFixed(1)} - Normal weight`;
   } else if (BMI >= 25 && BMI < 29.9) {
-    return "Your BMI is ".concat(BMI.toFixed(1), " - Overweight");
+    return `Your BMI is ${BMI.toFixed(1)} - Overweight`;
   } else {
-    return "Your BMI is ".concat(BMI.toFixed(1), " - Obesity");
+    return `Your BMI is ${BMI.toFixed(1)} - Obesity`;
   }
 }
 //Challenge 8: Greeting Based on Time
 function greetUser(name, hour) {
   if (hour >= 5 && hour <= 12) {
-    return "Good Morning, ".concat(name, "!");
+    return `Good Morning, ${name}!`;
   } else if (hour > 12 && hour <= 17) {
-    return "Good Afternoon, ".concat(name, "!");
+    return `Good Afternoon, ${name}!`;
   } else if (hour > 17 && hour <= 21) {
-    return "Good Evening, ".concat(name, "!");
+    return `Good Evening, ${name}!`;
   }
-  return "Good Night, ".concat(name, "!");
+  return `Good Night, ${name}!`;
 }
 //Challenge 9: FizzBuzz
 function fizzBuzzCheck(num) {
@@ -72,8 +73,8 @@ function perimeter(letter, num) {
 }
 //Challenge 11: Sum of Evven Numbers
 function sumEvenNumbers(n) {
-  var sum = 0;
-  for (var i = 0; i <= n; i++) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
     if (i % 2 === 0) {
       sum += i;
     }
@@ -81,12 +82,9 @@ function sumEvenNumbers(n) {
   return sum;
 }
 //Challenge 12: Multiply By itself
-function powerUp(num, times) {
-  if (times === void 0) {
-    times = 0;
-  }
-  var result = 1;
-  for (var i = 0; i < times; i++) {
+function powerUp(num, times = 0) {
+  let result = 1;
+  for (let i = 0; i < times; i++) {
     result *= num;
   }
   return result;
@@ -98,16 +96,16 @@ function factorial(n) {
   } else if (n == 1) {
     return 1;
   }
-  var result = 1;
-  for (var i = 2; i <= n; i++) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
     result *= i;
   }
   return result;
 }
 //Challenge 14: Multiple Sum
 function sumMultiples(n, divisor) {
-  var sum = 0;
-  for (var i = 1; i <= n; i++) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
     if (i % divisor === 0) {
       sum += i;
     }
@@ -115,9 +113,10 @@ function sumMultiples(n, divisor) {
   return sum;
 }
 function sumDigits(num) {
-  var sum = 0;
+  let sum = 0;
   while (num > 0) {
-    sum += num % 10; // Add the last digit to sum
+    let lastDigit = num % 10;
+    sum += lastDigit; // Add the last digit to sum
     num = Math.floor(num / 10); // Remove the last digit
   }
   return sum;

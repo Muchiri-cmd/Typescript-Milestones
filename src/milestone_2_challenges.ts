@@ -151,6 +151,40 @@ function linearSearchAll(array: number[], value: number): number[] {
   return indices;
 }
 
+//Challenge14: Count Occurrences
+function countOccurrences(array: string[]): {} {
+  let occurrences: Record<string, number> = {};
+  for (let item of array) {
+    if (occurrences[item]) {
+      occurrences[item]++;
+    } else {
+      occurrences[item] = 1;
+    }
+  }
+  return occurrences;
+}
+
+//Challenge15: Remove Duplicates
+function removeDuplicates(array: number[]): number[] {
+  return array.filter((item, index) => array.indexOf(item) === index);
+}
+
+//Challenge16:Mot Frequnt
+function mostFrequent(array: number[] | string[]): number | string {
+  let counts: Record<number | string, number> = {};
+  let maxCount = 0;
+  let mostFrequentItem: number | string = array[0];
+
+  for (let item of array) {
+    counts[item] = (counts[item] || 0) + 1;
+    if (counts[item] > maxCount) {
+      maxCount = counts[item];
+      mostFrequentItem = item;
+    }
+  }
+  return mostFrequentItem;
+}
+
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -203,3 +237,17 @@ console.log(
 );
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7)); // returns: [2, 5]
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10)); // returns: []
+
+console.log("=======================Count Occurrences====================");
+console.log(
+  countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]),
+); // returns: { apple: 3, banana: 2, orange: 1 })
+
+console.log("=======================Remove Duplicates====================");
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // returns: [1, 2, 3, 4, 5]
+
+console.log("=======================Most Frequent====================");
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4])); // returns: 3
+console.log(
+  mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]),
+); // returns: "apple")
