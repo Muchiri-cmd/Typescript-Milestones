@@ -30,7 +30,7 @@ function findWinner(array) {
     }
     return winner;
 }
-// Longest Word
+//Challenge4: Longest Word
 function findLongestWord(array) {
     var maxLength = array[0].length;
     var longestWord = "";
@@ -41,6 +41,9 @@ function findLongestWord(array) {
         }
     });
     return longestWord;
+}
+function countProperties(object) {
+    return Object.keys(object).length;
 }
 //Test cases
 console.log("==================Sum of Positives=====================");
@@ -56,3 +59,5 @@ var candidates = [
 console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
 console.log("====================Longest word==========================");
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // returns: "grapefruit"
+console.log("===================Count Properties========================");
+console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // returns: 3

@@ -37,7 +37,7 @@ function findWinner(array: Candidate[]): Candidate {
   }
   return winner;
 }
-// Longest Word
+//Challenge4: Longest Word
 function findLongestWord(array: string[]): string {
   let maxLength = array[0].length;
   let longestWord = "";
@@ -49,6 +49,21 @@ function findLongestWord(array: string[]): string {
     }
   });
   return longestWord;
+}
+
+//Challenge5: Count Properties
+interface UserInfo {
+  name: string;
+  age: number;
+  city: string;
+}
+function countProperties(object: UserInfo): number {
+  // return Object.keys(object).length;
+  let numberofProperties = 0;
+  for (let prop in object) {
+    numberofProperties += 1;
+  }
+  return numberofProperties;
 }
 
 //Test cases
@@ -68,3 +83,6 @@ console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
 
 console.log("====================Longest word==========================");
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // returns: "grapefruit"
+
+console.log("===================Count Properties========================");
+console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // returns: 3
