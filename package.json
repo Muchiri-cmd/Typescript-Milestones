@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "code": "tsc src/milestone_1_challenges.ts && node src/milestone_1_challenges.js",
+    "code": "tsc src/milestone_2_challenges.ts && node src/milestone_2_challenges.js",
     "format": "prettier --write .",
     "fr": "npm run format && npm run code"
   },

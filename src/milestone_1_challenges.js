@@ -1,136 +1,126 @@
 //Challenge 1: Return th sum of Two Numbers
 function addition(num1, num2) {
-    return num1 + num2;
+  return num1 + num2;
 }
 //Challenge2: Convert Minutes into seconds
 function convert(int) {
-    return int * 60;
+  return int * 60;
 }
 //Challenge 3: Perimeter of a Rectangle
 function findPerimeter(length, width) {
-    return 2 * (length + width);
+  return 2 * (length + width);
 }
 //Challenge4:Check Negative
 function isNegative(num) {
-    if (num < 0) {
-        return true;
-    }
-    return false;
+  if (num < 0) {
+    return true;
+  }
+  return false;
 }
 //Challenge5: Can i Drive
 function canDrive(name, age) {
-    if (age >= 18) {
-        return "".concat(name, " is old enough to drive");
-    }
-    else {
-        return "".concat(name, " is not old enough to drive");
-    }
+  if (age >= 18) {
+    return "".concat(name, " is old enough to drive");
+  } else {
+    return "".concat(name, " is not old enough to drive");
+  }
 }
 //Challenge 6: Largest Number
 function findLargest(a, b, c) {
-    if (a >= b && a >= c)
-        return a;
-    else if (b >= a && b >= c)
-        return b;
-    else
-        return c;
+  if (a >= b && a >= c) return a;
+  else if (b >= a && b >= c) return b;
+  else return c;
 }
 //Challenge7: BMI Calculator
 function calculateBMI(weight, height) {
-    var BMI = weight / (height * height);
-    if (BMI < 18.5) {
-        return "Your BMI is ".concat(BMI.toFixed(1), " - Underweight");
-    }
-    else if (BMI >= 18.5 && BMI < 24.9) {
-        return "Your BMI is ".concat(BMI.toFixed(1), " - Normal weight");
-    }
-    else if (BMI >= 25 && BMI < 29.9) {
-        return "Your BMI is ".concat(BMI.toFixed(1), " - Overweight");
-    }
-    else {
-        return "Your BMI is ".concat(BMI.toFixed(1), " - Obesity");
-    }
+  var BMI = weight / (height * height);
+  if (BMI < 18.5) {
+    return "Your BMI is ".concat(BMI.toFixed(1), " - Underweight");
+  } else if (BMI >= 18.5 && BMI < 24.9) {
+    return "Your BMI is ".concat(BMI.toFixed(1), " - Normal weight");
+  } else if (BMI >= 25 && BMI < 29.9) {
+    return "Your BMI is ".concat(BMI.toFixed(1), " - Overweight");
+  } else {
+    return "Your BMI is ".concat(BMI.toFixed(1), " - Obesity");
+  }
 }
 //Challenge 8: Greeting Based on Time
 function greetUser(name, hour) {
-    if (hour >= 5 && hour <= 12) {
-        return "Good Morning, ".concat(name, "!");
-    }
-    else if (hour > 12 && hour <= 17) {
-        return "Good Afternoon, ".concat(name, "!");
-    }
-    else if (hour > 17 && hour <= 21) {
-        return "Good Evening, ".concat(name, "!");
-    }
-    return "Good Night, ".concat(name, "!");
+  if (hour >= 5 && hour <= 12) {
+    return "Good Morning, ".concat(name, "!");
+  } else if (hour > 12 && hour <= 17) {
+    return "Good Afternoon, ".concat(name, "!");
+  } else if (hour > 17 && hour <= 21) {
+    return "Good Evening, ".concat(name, "!");
+  }
+  return "Good Night, ".concat(name, "!");
 }
 //Challenge 9: FizzBuzz
 function fizzBuzzCheck(num) {
-    if (num % 3 === 0 && num % 5 === 0) {
-        return "FizzBuzz";
-    }
-    else if (num % 3 === 0) {
-        return "Fizz";
-    }
-    else if (num % 5 === 0) {
-        return "Buzz";
-    }
-    return num.toString();
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "FizzBuzz";
+  } else if (num % 3 === 0) {
+    return "Fizz";
+  } else if (num % 5 === 0) {
+    return "Buzz";
+  }
+  return num.toString();
 }
 //Challenge 10: Perimeter 2
 function perimeter(letter, num) {
-    return letter === "s" ? 4 * num : letter === "c" ? 6.28 * num : 0;
+  return letter === "s" ? 4 * num : letter === "c" ? 6.28 * num : 0;
 }
 //Challenge 11: Sum of Evven Numbers
 function sumEvenNumbers(n) {
-    var sum = 0;
-    for (var i = 0; i <= n; i++) {
-        if (i % 2 === 0) {
-            sum += i;
-        }
+  var sum = 0;
+  for (var i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
     }
-    return sum;
+  }
+  return sum;
 }
 //Challenge 12: Multiply By itself
 function powerUp(num, times) {
-    if (times === void 0) { times = 0; }
-    var result = 1;
-    for (var i = 0; i < times; i++) {
-        result *= num;
-    }
-    return result;
+  if (times === void 0) {
+    times = 0;
+  }
+  var result = 1;
+  for (var i = 0; i < times; i++) {
+    result *= num;
+  }
+  return result;
 }
 //Challenge 13: Factorial Calulator
 function factorial(n) {
-    if (n < 0) {
-        return;
-    }
-    else if (n == 1) {
-        return 1;
-    }
-    var result = 1;
-    for (var i = 2; i <= n; i++) {
-        result *= i;
-    }
-    return result;
+  if (n < 0) {
+    return;
+  } else if (n == 1) {
+    return 1;
+  }
+  var result = 1;
+  for (var i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
 //Challenge 14: Multiple Sum
 function sumMultiples(n, divisor) {
-    var sum = 0;
-    for (var i = 1; i <= n; i++) {
-        if (i % divisor === 0) {
-            sum += i;
-        }
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    if (i % divisor === 0) {
+      sum += i;
     }
-    return sum;
+  }
+  return sum;
 }
 function sumDigits(num) {
-    var sum = 0;
-    while (num > 0) {
-        sum += num % 10; // Add the last digit to sum
-        num = Math.floor(num / 10); // Remove the last digit
-    }
-    return sum;
+  var sum = 0;
+  while (num > 0) {
+    sum += num % 10; // Add the last digit to sum
+    num = Math.floor(num / 10); // Remove the last digit
+  }
+  return sum;
 }
 //Test cases
 console.log("Sum of 2 Numbers");
