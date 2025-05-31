@@ -106,6 +106,14 @@ function average(array) {
         return average;
     return 0;
 }
+//Challenge11: Linear Search
+function linearSearch(array, value) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value)
+            return i;
+    }
+    return -1;
+}
 //Test cases
 console.log("==================Sum of Positives=====================");
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // 15
@@ -133,3 +141,6 @@ console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // ret
 console.log("========================Average of Numbers ======================");
 console.log(average([2, 4, 6, 8])); // returns: 5
 console.log(average([])); // returns: 0
+console.log("=======================Linear Search====================");
+console.log(linearSearch([5, 3, 7, 1, 4], 7)); // returns: 2
+console.log(linearSearch([5, 3, 7, 1, 4], 10)); // returns: -1
